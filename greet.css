@@ -1,0 +1,18 @@
+/****************** Setting Element *****************************/
+
+/****************** The box model *******************************/
+ .container {
+    background-color: wheat;
+    width: 350px;
+    border:  3px  ridge  black;
+    padding: 50px;
+    margin: 30px;
+}
+
+.container h1{
+    text-align: center;
+}
+.counter {
+    float:right
+}
+/****************** For page layout use *************************/
