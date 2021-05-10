@@ -14,31 +14,48 @@
     <div class="row">
         <div class="container">
             <h1>Greeting</h1>
-            <label for="">Name</label>
-            <input type="" name="greetingWithSetting" class="greetingWithSetting" id="text" value=""
-                placeholder="enter your name"><br>
-            <br>
             <label class="">
-                <td><span class="counter"></span></td>
-            </label>
-            <label for="english">English</label>
-            <input class="theLanguage englishSetting" type="radio" name="language" id="English" value="English" value="">
-            <label for="afrikaans">Afrikaans</label>
-            <input class="theLanguage afrikaansSettings" type="radio" name="language" id="Afrikaans"
-                value="Afrikaans">
-            <label for="isixhosa">Isixhosa</label>
-            <input class="theLanguage isixhosaSettings" type="radio" name="language" id="Isixhosa"
-                value="Isixhosa"><br>
+                <span class="empty"></span>
+            </label><br>
             <br>
-            <button class="Addbutton" type="Button" name="button">Great Me</button><br>
-            <!-- <button class="resetBtn" type="Button" name="button">Reset</button><br> -->
-           
-            <br>
-            <label class="">
-                <td><span class="greeting"></span></td>
-            </label>
 
+            <div class="Counter">
+                <h3>Counter</h3>
+                <label class="">
+                    <span class="counter"></span>
+                </label>
+            </div>
+                  
+                <label for="">Name</label>
+                <input type="" name="greetingWithSetting" class="greetingWithSetting" id="text" value=""
+                    placeholder="enter your name" onkeypress="return(event.charCode > 64 && event.charCode < 91)||(event.charCode > 96 && event.charCode < 123)"><br>
+                <br>
+                <div class="radio">
+                    <input class="theLanguage englishSetting" type="radio"  name="language" id="English" value="English">
+                    <label for="english">English</label>
+                    <br>
+                    <input class="theLanguage afrikaansSettings" type="radio" name="language" id="Afrikaans"
+                        value="Afrikaans">
+                    <label for="afrikaans">Afrikaans</label>
+                    <br>
+                    <input class="theLanguage isixhosaSettings" type="radio" name="language" id="Isixhosa"
+                        value="Isixhosa">
+                    <label for="isixhosa">Isixhosa</label>
+                    <br>
+                </div>
             
+            <br>
+            <button class="Addbutton" type="Button" name="button">Great Me</button>
+            <button class="resetBtn" type="Button" name="button">Reset</button><br>
+               
+            <br>
+            <label class="">
+                <span class="greeting"></span>
+            </label><br>
+            <br>
+            <!-- <label class="">
+               <span class="empty"></span>
+            </label> --> 
         </div>
     </div>
 </body>
