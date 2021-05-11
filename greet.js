@@ -3,7 +3,8 @@ function Greeting(existingNames) {
     var nameList = existingNames || []
 
     function theName(name) {
-        console.log(name)
+       name = name.toLowerCase()
+       name = name.toUpperCase()
         if (name) {
             if (!nameList.includes(name)) {
                 nameList.push(name)

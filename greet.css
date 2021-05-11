@@ -35,5 +35,26 @@
     padding-left: 30px;
 }
 
+/* .English{
+  padding-left: 8px;
+}
+
+.Afrikaans {
+  padding-left: 8px;
+}
+
+.Isixhosa {
+  padding-left: 8px;
+} */
+
+.English {
+  margin: 0.5em;
+}
+.Afrikaans {
+  margin: 0.5em;
+}
+.Isixhosa {
+  margin: 0.5em;
+}
 
 /****************** For page layout use *************************/
