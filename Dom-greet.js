@@ -7,7 +7,7 @@ var counterElem = document.querySelector(".counter")
 var emptyElem = document.querySelector(".empty")
 //get a reference to the greet me button
 var AddBtneElem = document.querySelector(".Addbutton")
-var languageElem = document.querySelector(".theLanguage");
+// var languageElem = document.querySelector(".theLanguage");
 
 var existingNames;
 
@@ -21,8 +21,8 @@ var settingInstance = Greeting(existingNames);
 AddBtneElem.addEventListener('click', function () {
  
 
-    var tickTockBtn = document.querySelector("input[name='language']:checked").checked = false;
-
+    var tickTockBtn = document.querySelector("input[name='language']:checked");
+    document.querySelector("input[name='language']:checked").checked=false;
     if (nameSet.value && tickTockBtn) {
 
         //alert(tickTockBtn.value)
@@ -32,7 +32,7 @@ AddBtneElem.addEventListener('click', function () {
             console.log(Object.keys(settingInstance.getName()))
             localStorage.setItem('name', JSON.stringify(settingInstance.getName()))
             counterElem.innerHTML = settingInstance.greetCounter();
-            languageElem = "";
+            
 
         }
 
@@ -43,7 +43,7 @@ AddBtneElem.addEventListener('click', function () {
         emptyElem.innerHTML = "please enter name and select language"
         setTimeout(function(){
             emptyElem.innerHTML = "";
-        }, 2000)
+        }, 1000)
     }
     else if (!nameSet.value) {
         //alert(!tickTockBtn)
@@ -51,16 +51,17 @@ AddBtneElem.addEventListener('click', function () {
         emptyElem.innerHTML = "Please enter name"
         setTimeout(function(){
             emptyElem.innerHTML = "";
-        }, 2000)
+        }, 1000)
     }
     else if (tickTockBtn === null) {
         emptyElem.innerHTML = "Please select language"
         setTimeout(function(){
             emptyElem.innerHTML = "";
-        }, 2000)
+        }, 1000)
     }
     //alert(!tickTockBtn)
     nameSet.value = "";
+   
     
 });
 
