@@ -7,7 +7,7 @@ var counterElem = document.querySelector(".counter")
 var emptyElem = document.querySelector(".empty")
 //get a reference to the greet me button
 var AddBtneElem = document.querySelector(".Addbutton")
-var emptyErr;
+
 
 var existingNames;
 
@@ -41,14 +41,23 @@ AddBtneElem.addEventListener('click', function () {
           
      if (!nameSet.value && tickTockBtn === null) {
         emptyElem.innerHTML = "please enter name and select language"
+        setTimeout(function(){
+            emptyElem.innerHTML = "";
+        }, 2000)
     }
     else if (!nameSet.value) {
         //alert(!tickTockBtn)
 
         emptyElem.innerHTML = "Please enter name"
+        setTimeout(function(){
+            emptyElem.innerHTML = "";
+        }, 2000)
     }
     else if (tickTockBtn === null) {
         emptyElem.innerHTML = "Please select language"
+        setTimeout(function(){
+            emptyElem.innerHTML = "";
+        }, 2000)
     }
     //alert(!tickTockBtn)
     nameSet.value = "";
