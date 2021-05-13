@@ -22,7 +22,7 @@ AddBtneElem.addEventListener('click', function () {
  
 
     var tickTockBtn = document.querySelector("input[name='language']:checked");
-    document.querySelector("input[name='language']:checked").checked=false;
+    
     if (nameSet.value && tickTockBtn) {
 
         //alert(tickTockBtn.value)
@@ -32,7 +32,7 @@ AddBtneElem.addEventListener('click', function () {
             console.log(Object.keys(settingInstance.getName()))
             localStorage.setItem('name', JSON.stringify(settingInstance.getName()))
             counterElem.innerHTML = settingInstance.greetCounter();
-            
+          
 
         }
 
@@ -44,6 +44,10 @@ AddBtneElem.addEventListener('click', function () {
         setTimeout(function(){
             emptyElem.innerHTML = "";
         }, 1000)
+        setTimeout(function(){
+            location.reload()
+        }, 2000)
+        
     }
     else if (!nameSet.value) {
         //alert(!tickTockBtn)
@@ -52,18 +56,28 @@ AddBtneElem.addEventListener('click', function () {
         setTimeout(function(){
             emptyElem.innerHTML = "";
         }, 1000)
+        setTimeout(function(){
+            location.reload()
+        }, 2000)
+        // location.reload()
+
     }
     else if (tickTockBtn === null) {
         emptyElem.innerHTML = "Please select language"
         setTimeout(function(){
             emptyElem.innerHTML = "";
         }, 1000)
+        setTimeout(function(){
+            location.reload() 
+        }, 2000)
     }
     //alert(!tickTockBtn)
     nameSet.value = "";
    
-    
 });
+
+
+
 
 counterElem.innerHTML = settingInstance.greetCounter();
 
